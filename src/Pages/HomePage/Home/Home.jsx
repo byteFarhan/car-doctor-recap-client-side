@@ -1,14 +1,18 @@
 import { Helmet } from "react-helmet-async";
-import Footer from "../../Shared/Footer/Footer";
+import Carousel from "../Carousel/Carousel";
 
 const Home = () => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <section className="container">
       <Helmet>
         <title>Home || Car Doctors</title>
       </Helmet>
+      {/* slider or carousel section */}
+      <Carousel />
       <h1>Home...</h1>
-    </div>
+      <button className="btn-default btn-fill">Text</button>
+      {/* <BtnFill btnText="Test" onClick={() => console.log("clicked")} /> */}
+    </section>
   );
 };
 

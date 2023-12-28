@@ -3,27 +3,20 @@ import { FaGoogle, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import SocialIcon from "../../../components/SocialIcon";
 const Footer = () => {
   return (
-    <footer className=" py-20 p-10 bg-[#151515] text-[#E8E8E8]">
-      <div className="max-w-7xl mx-auto footer">
-        <aside className="[&>*]:max-w-[200px] lg:[&>*]:max-w-[300px]">
+    <footer className=" py-20 bg-[#151515] text-[#E8E8E8]">
+      <div className="container footer">
+        <aside className="[&>*]:max-w-[200px] lg:[&>*]:max-w-[250px]">
           <img src={logo} alt="logo..." />
           {/* <p>
           ACME Industries Ltd.
           <br />
           Providing reliable tech since 1992
         </p> */}
-          <p>
+          <p className="text-[#E8E8E8]">
             Edwin Diaz is a software and web technologies engineer, a life coach
             trainer who is also a serial.
           </p>
           <div className="flex gap-3 text-lg my-1 text-white [&>*]:p-2 [&>*]:rounded-full  [&>*]:bg-slate-800">
-            {/* <a
-              href="#"
-              target="_blank"
-              className="hover:scale-125 transition-transform duration-300"
-            >
-              <FaGoogle />
-            </a> */}
             <SocialIcon>
               <FaGoogle />
             </SocialIcon>
