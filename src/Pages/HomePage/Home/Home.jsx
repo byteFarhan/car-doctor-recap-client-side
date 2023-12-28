@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Carousel from "../Carousel/Carousel";
+import SectionIntro from "../SectionIntro/SectionIntro";
 
 const Home = () => {
   return (
@@ -9,9 +10,16 @@ const Home = () => {
       </Helmet>
       {/* slider or carousel section */}
       <Carousel />
-      <h1>Home...</h1>
+      <h1>Home... </h1>
       <button className="btn-default btn-fill">Text</button>
       {/* <BtnFill btnText="Test" onClick={() => console.log("clicked")} /> */}
+      <section>
+        <SectionIntro
+          sectionCategory="Service"
+          sectionTitle="Our Service Area"
+          sectionDescription="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "
+        />
+      </section>
     </section>
   );
 };

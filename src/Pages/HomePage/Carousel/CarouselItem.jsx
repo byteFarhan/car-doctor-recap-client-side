@@ -23,7 +23,7 @@ const CarouselItem = ({
         // style={backgroundImageStyle}
       >
         <img src={img} className="object-cover w-full" />
-        <div className="absolute flex flex-col w-1/2 h-full justify-center items-center bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)] bg-blend-overlay">
+        <div className="absolute flex flex-col w-1/2 h-full justify-center items-center bg-gradient-to-r from-secondary to-[rgba(21, 21, 21, 0.00)] bg-blend-overlay">
           <div className="w-2/3 space-y-7">
             <h1>{title}</h1>
             <p className="text-white">{description}</p>

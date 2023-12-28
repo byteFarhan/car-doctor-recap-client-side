@@ -36,7 +36,7 @@
     @apply rounded border-primary hover:border-primary text-primary hover:text-primary;
   }
   .btn-transparent-gray {
-    @apply text-white border-2 border-neutral hover:border-neutral hover:bg-transparent;
+    @apply text-white border-2 rounded border-neutral hover:border-neutral hover:bg-transparent;
   }
   /* .btn-fill {
     @apply bg-primary;
