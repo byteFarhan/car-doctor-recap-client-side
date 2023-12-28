@@ -56,10 +56,16 @@ const CarouselItem = ({
           </div>
         </div> */}
         <div className="absolute bottom-0 flex items-end justify-end gap-5 transform -translate-y-1/2 left-5 right-5">
-          <a href={`${rightSlideIconPath}`} className="btn btn-circle">
+          <a
+            href={`${rightSlideIconPath}`}
+            className="border-none btn btn-circle hover:bg-primary hover:text-white"
+          >
             ❮
           </a>
-          <a href={`${leftSlideIconPath}`} className="btn btn-circle">
+          <a
+            href={`${leftSlideIconPath}`}
+            className="border-none btn btn-circle hover:bg-primary hover:text-white"
+          >
             ❯
           </a>
         </div>

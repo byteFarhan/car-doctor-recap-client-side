@@ -4,13 +4,13 @@ import Navbar from "../../Pages/Shared/Navbar/Navbar";
 
 const MainLayout = () => {
   return (
-    <div>
+    <section>
       <header>
         <Navbar />
       </header>
       <Outlet />
       <Footer />
-    </div>
+    </section>
   );
 };
 
