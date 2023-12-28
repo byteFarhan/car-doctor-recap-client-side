@@ -17,7 +17,7 @@ const About = () => {
           </div>
 
           <div className="w-2/4 space-y-5">
-            <h5 className="text-xl font-bold text-primary">About Us</h5>
+            <h5 className="text-primary">About Us</h5>
             <h2 className="w-4/6 text-5xl font-bold leading-[60px]">
               We are qualified & of experience in this field
             </h2>

@@ -13,6 +13,9 @@
     @apply text-secondary text-[35px] font-bold;
   }
   h4 {
+    @apply text-2xl font-bold text-secondary;
+  }
+  h5 {
     @apply text-xl font-bold text-secondary;
   }
   p {
