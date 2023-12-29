@@ -7,7 +7,7 @@
     @apply lg:text-6xl font-bold lg:leading-[75px] leading-normal text-4xl;
   }
   h2 {
-    @apply text-secondary text-[45px] font-bold;
+    @apply text-secondary text-3xl leading-snug md:leading-normal md:text-[45px] font-bold;
   }
   h3 {
     @apply text-secondary text-[35px] font-bold;
