@@ -12,7 +12,7 @@ const ServicesCard = ({ service }) => {
             className="rounded-md object-cover h-[250px] w-full"
           />
         </figure>
-        <h4 className="card-title">{title}</h4>
+        <h4 className="">{title}</h4>
         <div className="flex justify-between pb-4">
           <p className="text-xl font-semibold text-primary">Price: ${price}</p>
           <p className="text-3xl font-semibold text-primary">

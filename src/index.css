@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply text-6xl font-bold leading-[75px];
+    @apply lg:text-6xl font-bold lg:leading-[75px] leading-normal text-4xl;
   }
   h2 {
     @apply text-secondary text-[45px] font-bold;
@@ -29,10 +29,10 @@
     @apply px-5 py-2 text-lg font-semibold text-white transition-transform duration-100 rounded-sm focus:outline-none hover:scale-95;
   }
   .btn-fill {
-    @apply text-lg text-white border-none rounded btn bg-primary focus:border-none hover:bg-primary;
+    @apply px-3 text-white border-none rounded lg:px-5 lg:text-lg btn bg-primary focus:border-none hover:bg-primary;
   }
   .btn-transparent {
-    @apply text-lg bg-transparent px-7 btn btn-outline hover:bg-transparent;
+    @apply px-3 bg-transparent lg:text-lg lg:px-5 btn btn-outline hover:bg-transparent;
   }
 
   .btn-transparent-red {

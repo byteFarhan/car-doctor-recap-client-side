@@ -10,7 +10,7 @@ const Carousel = () => {
   return (
     // Next time i will create fully functional carosul using array map method. And storing carousel datas in Array of object.
     <>
-      <section className="w-full my-5 text-white rounded-xl carousel max-h-[700px]">
+      <section className="w-full my-5 text-white rounded-md md:rounded-xl carousel p-0 lg:max-h-[700px]">
         {/* Carousel Item-1 */}
         <CarouselItem
           sliderNo={"slide1"}

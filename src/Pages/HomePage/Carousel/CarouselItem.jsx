@@ -23,11 +23,11 @@ const CarouselItem = ({
         // style={backgroundImageStyle}
       >
         <img src={img} className="object-cover w-full" />
-        <div className="absolute flex flex-col w-1/2 h-full justify-center items-center bg-gradient-to-r from-secondary to-[rgba(21, 21, 21, 0.00)] bg-blend-overlay">
-          <div className="w-2/3 space-y-7">
-            <h1>{title}</h1>
-            <p className="text-white">{description}</p>
-            <div className="space-x-5">
+        <div className="absolute flex flex-col w-full lg:w-1/2 h-full justify-center lg:items-center bg-gradient-to-r from-secondary to-[rgba(21, 21, 21, 0.00)] bg-blend-overlay">
+          <div className="w-full p-3 space-y-3 md:p-5 lg:p-0 md:w-4/6 lg:w-2/3 lg:space-y-7">
+            <h1 className="leading-tight">{title}</h1>
+            <p className="text-sm text-white md:text-base">{description}</p>
+            <div className="space-x-3 md:space-x-5">
               <Link to={rightBtnPath}>
                 <button className="btn-fill">{rightBtnText}</button>
               </Link>
@@ -55,16 +55,16 @@ const CarouselItem = ({
             </div>
           </div>
         </div> */}
-        <div className="absolute bottom-0 flex items-end justify-end gap-5 transform -translate-y-1/2 left-5 right-5">
+        <div className="absolute bottom-0 flex items-end justify-end gap-3 transform -translate-y-1/2 md:gap-5 md:left-5 md:right-5 left-1 right-2">
           <a
             href={`${rightSlideIconPath}`}
-            className="border-none btn btn-circle hover:bg-primary hover:text-white"
+            className="p-3 border-none rounded-full btn md:btn-circle hover:bg-primary hover:text-white"
           >
             ❮
           </a>
           <a
             href={`${leftSlideIconPath}`}
-            className="border-none btn btn-circle hover:bg-primary hover:text-white"
+            className="p-3 border-none rounded-full btn md:btn-circle hover:bg-primary hover:text-white"
           >
             ❯
           </a>
