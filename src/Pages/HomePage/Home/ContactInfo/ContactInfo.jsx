@@ -19,7 +19,9 @@ const ContactInfo = () => {
           <img src={phoneIcon} alt="phone Icon" />
           <div className="space-y-2">
             <p className="text-white">Have a question?</p>
-            <h4 className="text-white">+2546 251 2658</h4>
+            <h4 className="text-white">
+              <a href="tel:+2546 251 2658">+2546 251 2658</a>
+            </h4>
           </div>
         </div>
         <div className="flex gap-5">

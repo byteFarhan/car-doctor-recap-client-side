@@ -5,6 +5,7 @@ import About from "../About/About";
 import Services from "../Services/Services";
 import ContactInfo from "./ContactInfo/ContactInfo";
 import PopularProducts from "../PopularProducts/PopularProducts";
+import OurTeam from "../OurTeam/OurTeam";
 // import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
       <Services />
       <ContactInfo />
       <PopularProducts />
+      <OurTeam />
     </section>
   );
 };

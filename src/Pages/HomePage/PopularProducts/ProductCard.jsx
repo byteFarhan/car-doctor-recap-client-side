@@ -39,6 +39,7 @@ const ProductCard = ({ product }) => {
               name="rating-2"
               className="bg-orange-400 mask mask-star-2"
               checked
+              readOnly
             />
           </div>
           <h4 className="">{title}</h4>
