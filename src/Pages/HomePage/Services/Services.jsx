@@ -9,7 +9,7 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-  console.log(services);
+  //   console.log(services);
   return (
     <>
       <section className="mt-32 mb-20">
@@ -23,6 +23,9 @@ const Services = () => {
             <ServicesCard key={service.service_id} service={service} />
           ))}
         </div>
+        <button className="block mx-auto my-10 btn-transparent btn-transparent-red">
+          More Services
+        </button>
       </section>
     </>
   );
