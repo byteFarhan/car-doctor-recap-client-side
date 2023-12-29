@@ -19,6 +19,9 @@ export default {
         secondary: "#151515",
         neutral: "#737373",
       },
+      fontFamily: {
+        inter: "'Inter', sans-serif",
+      },
     },
   },
   plugins: [require("daisyui")],

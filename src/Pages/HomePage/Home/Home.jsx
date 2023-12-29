@@ -3,6 +3,7 @@ import Carousel from "../Carousel/Carousel";
 // import SectionIntro from "../SectionIntro/SectionIntro";
 import About from "../About/About";
 import Services from "../Services/Services";
+import ContactInfo from "./ContactInfo/ContactInfo";
 // import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
@@ -20,6 +21,7 @@ const Home = () => {
       {/* <BtnFill btnText="Test" onClick={() => console.log("clicked")} /> */}
       <About />
       <Services />
+      <ContactInfo />
     </section>
   );
 };
