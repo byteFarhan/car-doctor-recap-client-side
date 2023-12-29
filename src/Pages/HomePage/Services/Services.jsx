@@ -12,7 +12,7 @@ const Services = () => {
   //   console.log(services);
   return (
     <>
-      <section className="mt-32 mb-20">
+      <section id="services" className="mt-32 mb-20">
         <SectionIntro
           sectionCategory="Service"
           sectionTitle="Our Service Area"

@@ -4,7 +4,10 @@ import locationIcon from "../../../../assets/icons/locationIcon.svg";
 const ContactInfo = () => {
   return (
     <>
-      <section className="flex flex-col items-center justify-center gap-8 px-5 py-10 my-20 text-white rounded-md md:p-20 lg:gap-0 lg:justify-between lg:flex-row bg-secondary">
+      <section
+        id="contactInfo"
+        className="flex flex-col items-center justify-center gap-8 px-5 py-10 my-20 text-white rounded-md md:p-20 lg:gap-0 lg:justify-between lg:flex-row bg-secondary"
+      >
         <div className="flex gap-5">
           <img src={calenderIcon} alt="calender Icon" />
           <div className="space-y-2">

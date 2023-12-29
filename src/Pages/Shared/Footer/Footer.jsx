@@ -3,7 +3,7 @@ import { FaGoogle, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import SocialIcon from "../../../components/SocialIcon";
 const Footer = () => {
   return (
-    <footer className=" py-20 bg-[#151515] text-[#E8E8E8]">
+    <footer id="footer" className=" py-20 bg-[#151515] text-[#E8E8E8]">
       <div className="container footer">
         <aside className="[&>*]:max-w-[200px] lg:[&>*]:max-w-[250px]">
           <img src={logo} alt="logo..." />
