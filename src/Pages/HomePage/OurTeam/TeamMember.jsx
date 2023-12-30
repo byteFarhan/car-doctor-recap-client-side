@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import SocialIcon from "../../../components/SocialIcon";
 const TeamMember = ({ member }) => {
   const { job_category, job_title, img } = member;
   return (
@@ -20,11 +21,19 @@ const TeamMember = ({ member }) => {
       <div className="py-3 space-y-3 text-center">
         <h4 className="">{job_title}</h4>
         <p className="text-xl font-semibold text-neutral">{job_category}</p>
-        <div className="flex justify-center gap-5 text-lg [&>*]:bg-secondary text-white [&>*]:p-2 [&>*]:w-[40px] [&>*]:h-[40px] [&>*]:rounded-full">
-          <FaFacebookF />
-          <FaTwitter />
-          <FaLinkedinIn />
-          <FaInstagram />
+        <div className="flex justify-center gap-3 [&>*]:bg-secondary text-white [&>*]:p-2 [&>*]:rounded-full">
+          <SocialIcon>
+            <FaFacebookF />
+          </SocialIcon>
+          <SocialIcon>
+            <FaTwitter />
+          </SocialIcon>
+          <SocialIcon>
+            <FaLinkedinIn />
+          </SocialIcon>
+          <SocialIcon>
+            <FaInstagram />
+          </SocialIcon>
         </div>
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Proptypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 const CarouselItem = ({
   sliderNo,
   img,
@@ -58,15 +59,15 @@ const CarouselItem = ({
         <div className="absolute bottom-0 flex items-end justify-end gap-3 transform -translate-y-1/2 md:gap-5 md:left-5 md:right-5 left-1 right-2">
           <a
             href={`${rightSlideIconPath}`}
-            className="p-3 border-none rounded-full btn md:btn-circle hover:bg-primary hover:text-white"
+            className="p-3 border-none rounded-full btn md:btn-circle bg-[#FFFFFF33] hover:bg-primary text-white"
           >
-            ❮
+            <FaArrowLeft />
           </a>
           <a
             href={`${leftSlideIconPath}`}
-            className="p-3 border-none rounded-full btn md:btn-circle hover:bg-primary hover:text-white"
+            className="p-3 border-none rounded-full btn md:btn-circle bg-[#FFFFFF33] hover:bg-primary text-white"
           >
-            ❯
+            <FaArrowRight />
           </a>
         </div>
       </div>

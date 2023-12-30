@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { GoArrowRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 const ServicesCard = ({ service }) => {
   const { img, title, price } = service;
   return (
@@ -16,7 +17,9 @@ const ServicesCard = ({ service }) => {
         <div className="flex justify-between pb-4">
           <p className="text-xl font-semibold text-primary">Price: ${price}</p>
           <p className="text-3xl font-semibold text-primary">
-            <GoArrowRight />
+            <Link to={"#"}>
+              <GoArrowRight />
+            </Link>
           </p>
         </div>
       </div>
