@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
 const Feature = ({ featureName, featureIcon }) => {
   return (
-    <div className={`p-8 space-y-5 rounded-md shadow`}>
+    <div
+      className={`p-8 space-y-5 rounded-md shadow ${
+        featureName === "Timely Delivery" && "bg-primary"
+      }`}
+    >
       <img src={featureIcon} alt="" className="mx-auto" />
       <h5
         className={`text-lg text-center ${

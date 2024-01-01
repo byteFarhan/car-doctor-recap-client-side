@@ -7,7 +7,10 @@ import ContactInfo from "./ContactInfo/ContactInfo";
 import PopularProducts from "../PopularProducts/PopularProducts";
 import OurTeam from "../OurTeam/OurTeam";
 import CoreFeatures from "../CoreFeatures/CoreFeatures";
+import Testimonial from "../Testimonial/Testimonial";
 // import { useLoaderData } from "react-router-dom";
+import img2 from "../../../assets/images/team/2.jpg";
+import img from "../../../assets/images/team/1.jpg";
 
 const Home = () => {
   // const services = useLoaderData();
@@ -28,6 +31,15 @@ const Home = () => {
       <PopularProducts />
       <OurTeam />
       <CoreFeatures />
+      <Testimonial />
+      {/* <a className="btn btn-primary" href={img} download={img2}>
+        Download
+      </a> */}
+      {/* <button className="btn btn-primary">
+        <a href="https://example.com/sophia_white.jpg" download>
+          Downlode
+        </a>
+      </button> */}
     </section>
   );
 };

@@ -18,13 +18,17 @@ const CoreFeatures = () => {
           sectionDescription="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-6">
-          <Feature featureIcon={expertTeam} featureName="Expert Team" />
-          <div className="[&>*]:text-white rounded-md bg-primary">
+          {/* <div className="[&>*]:text-white rounded-md bg-primary">
             <Feature
               featureIcon={timelyDelivery2}
               featureName="Timely Delivery"
             />
-          </div>
+          </div> */}
+          <Feature featureIcon={expertTeam} featureName="Expert Team" />
+          <Feature
+            featureIcon={timelyDelivery2}
+            featureName="Timely Delivery"
+          />
           <Feature featureIcon={SupportIcon} featureName="24/7 Support" />
           <Feature featureIcon={bestEquipment} featureName="Best Equipment" />
           <Feature featureIcon={gurantyIcon} featureName="100% Guranty" />

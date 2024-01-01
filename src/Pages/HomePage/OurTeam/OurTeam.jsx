@@ -9,7 +9,7 @@ const OurTeam = () => {
       .then((res) => res.json())
       .then((data) => setTeam(data));
   }, []);
-  console.log(team);
+  // console.log(team);
   return (
     <section id="outTeam" className="my-40">
       <SectionIntro
