@@ -86,7 +86,7 @@ const Register = () => {
                       // style={{ textShadow: "2px 2px 0 rgba(0.5,0,0,0.5) " }}
                       className="w-full rounded-md btn-fill"
                     >
-                      Login
+                      Register
                     </button>
                   </div>
                 </form>
