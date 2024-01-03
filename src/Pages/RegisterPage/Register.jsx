@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import loginSvg from "../../assets/images/login/login.svg";
 import googleIcon from "../../assets/icons/google-icon.png";
 
-const Login = () => {
+const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const Login = () => {
     <>
       <section id="login" className="mx-auto max-w-7xl">
         <Helmet>
-          <title>Login || Car Doctors</title>
+          <title>Register || Car Doctors</title>
         </Helmet>
         <div className="flex items-center gap-20 px-5 py-10 my-20 md:px-16 lg:px-0">
           <div className="hidden lg:block">
@@ -28,9 +28,23 @@ const Login = () => {
             <div className="w-full lg:w-4/5">
               <div className="w-full py-5 rounded shadow md:p-10">
                 <h3 className="mb-4 text-3xl font-semibold text-center md:mb-8 md:font-bold md:text-4xl">
-                  Login
+                  Register
                 </h3>
                 <form onSubmit={handleLogin} className="space-y-5">
+                  <div className="px-10 form-control">
+                    <label className="label">
+                      <span className="text-lg font-semibold text-secondary">
+                        Name
+                      </span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Your name"
+                      name="email"
+                      className="p-3 rounded-md outline outline-1 outline-secondary focus:outline-2"
+                      required
+                    />
+                  </div>
                   <div className="px-10 form-control">
                     <label className="label">
                       <span className="text-lg font-semibold text-secondary">
@@ -90,12 +104,9 @@ const Login = () => {
                 </div>
 
                 <p className="my-3 text-center">
-                  {`Don't have any account? `}
-                  <Link
-                    to={"/register"}
-                    className="text-primary hover:underline"
-                  >
-                    Register
+                  {`Already have an account? `}
+                  <Link to={"/login"} className="text-primary hover:underline">
+                    Login
                   </Link>
                 </p>
               </div>
@@ -108,7 +119,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
 
 {
   /* <form onSubmit={handleLogin} className="card-body">
