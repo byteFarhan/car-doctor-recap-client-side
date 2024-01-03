@@ -9,6 +9,7 @@ const Navbar = () => {
     { routeName: "Services", routePath: "/services" },
     { routeName: "Blog", routePath: "/blog" },
     { routeName: "Contact", routePath: "/contact" },
+    { routeName: "Login", routePath: "/login" },
   ];
   // const navLinks = (
   //   <>

@@ -7,16 +7,30 @@ import SectionIntro from "../SectionIntro/SectionIntro";
 import TestimonialItem from "./TestimonialItem";
 // import "./testimonial.css";
 
-// const Arrow = function (props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "#151515" }}
-//       onClick={onClick}
-//     />
-//   );
-// };
+const Arrow = function ({ className, style, onClick }) {
+  // const Arrow = function (props) {
+  //   const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        background: "#151515",
+        color: "#fff",
+        borderRadius: "50%",
+        fontSize: "lerger",
+      }}
+      onClick={onClick}
+    />
+  );
+};
+
+Arrow.propTypes = {
+  onClick: PropTypes.func,
+  style: PropTypes.object,
+  className: PropTypes.string,
+};
 
 const Testimonial = () => {
   const [reviews, setReviews] = useState([]);
@@ -37,16 +51,24 @@ const Testimonial = () => {
   //   centerMode: true,
   // };
 
-  const Arrow = function (props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "#151515" }}
-        onClick={onClick}
-      />
-    );
-  };
+  // const Arrow = function ({ className, style, onClick }) {
+  //   // const Arrow = function (props) {
+  //   //   const { className, style, onClick } = props;
+  //   return (
+  //     <div
+  //       className={className}
+  //       style={{
+  //         ...style,
+  //         display: "block",
+  //         background: "#151515",
+  //         color: "#fff",
+  //         borderRadius: "50%",
+  //         fontSize: "lerger",
+  //       }}
+  //       onClick={onClick}
+  //     />
+  //   );
+  // };
 
   const settings = {
     dots: true,
@@ -65,7 +87,7 @@ const Testimonial = () => {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           // infinite: true,
           dots: true,
         },
@@ -94,7 +116,7 @@ const Testimonial = () => {
         sectionTitle="What Customer Says"
         sectionDescription="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "
       />
-      <div className="mt-12 space-x-5">
+      <div className="mt-16 space-x-5">
         <Slider {...settings}>
           {reviews.map((review) => (
             <TestimonialItem key={review.id} review={review} />

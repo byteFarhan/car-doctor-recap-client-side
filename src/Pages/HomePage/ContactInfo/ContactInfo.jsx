@@ -1,6 +1,7 @@
-import calenderIcon from "../../../../assets/icons/calenderIcon.svg";
-import phoneIcon from "../../../../assets/icons/phoneIcon.svg";
-import locationIcon from "../../../../assets/icons/locationIcon.svg";
+// import calenderIcon from "../../../../assets/icons/calenderIcon.svg";
+import calenderIcon from "../../../assets/icons/calenderIcon.svg";
+import phoneIcon from "../../../assets/icons/phoneIcon.svg";
+import locationIcon from "../../../assets/icons/locationIcon.svg";
 const ContactInfo = () => {
   return (
     <>
