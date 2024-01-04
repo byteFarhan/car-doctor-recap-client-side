@@ -8,10 +8,10 @@ import AuthProvider from "./Providers/AuthProvider.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <AuthProvider>
-      <HelmetProvider>
+    <HelmetProvider>
+      <AuthProvider>
         <RouterProvider router={router} />
-      </HelmetProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );

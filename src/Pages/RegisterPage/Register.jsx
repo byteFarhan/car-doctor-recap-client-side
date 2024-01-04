@@ -10,6 +10,11 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, email, password);
   };
   return (
     <>
@@ -40,7 +45,7 @@ const Register = () => {
                     <input
                       type="text"
                       placeholder="Your name"
-                      name="email"
+                      name="name"
                       className="p-3 rounded-md outline outline-1 outline-secondary focus:outline-2"
                       required
                     />

@@ -10,6 +10,11 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleLogin = (e) => {
     e.preventDefault();
+    const form = e.target;
+    // console.log(form);
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
   };
   return (
     <>
