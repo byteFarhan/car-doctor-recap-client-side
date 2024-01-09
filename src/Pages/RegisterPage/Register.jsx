@@ -1,20 +1,35 @@
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import { useState } from "react";
+// import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginSvg from "../../assets/images/login/login.svg";
-import googleIcon from "../../assets/icons/google-icon.png";
+// import googleIcon from "../../assets/icons/google-icon.png";
+import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import { AuthContext } from "../../Providers/AuthProvider";
+import swal from "sweetalert";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, email, password);
+    // console.log(name, email, password);
+    createUser(email, password)
+      .then((result) => {
+        swal("Good job!", "Sing In Successfull.", "success");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => {
+        swal({
+          title: error.message,
+        });
+      });
   };
   return (
     <>
@@ -35,7 +50,7 @@ const Register = () => {
                 <h3 className="mb-4 text-3xl font-semibold text-center md:mb-8 md:font-bold md:text-4xl">
                   Register
                 </h3>
-                <form onSubmit={handleLogin} className="space-y-5">
+                <form onSubmit={handleRegister} className="space-y-5">
                   <div className="px-10 form-control">
                     <label className="label">
                       <span className="text-lg font-semibold text-secondary">
@@ -95,19 +110,7 @@ const Register = () => {
                     </button>
                   </div>
                 </form>
-                <div className="my-5">
-                  <p className="text-center">Or Sign In with</p>
-                  <div className="flex justify-center gap-5 items-center my-3 text-2xl  [&>*]:p-2 [&>*]:text-blue-600 [&>*]:bg-slate-100 [&>*]:rounded-full">
-                    <FaFacebookF />
-                    <FaLinkedinIn />
-                    <img
-                      src={googleIcon}
-                      alt="google-icon..."
-                      className="h-8"
-                    />
-                  </div>
-                </div>
-
+                <SocialLogin />
                 <p className="my-3 text-center">
                   {`Already have an account? `}
                   <Link to={"/login"} className="text-primary hover:underline">

@@ -2,24 +2,86 @@ import RouteStyle from "../../../components/RouteStyle";
 // import logo from "../../../assets/logo.svg";
 import logo from "../../../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import swal from "sweetalert";
 const Navbar = () => {
-  const navLinks = [
-    { routeName: "Home", routePath: "/" },
-    { routeName: "About", routePath: "/about" },
-    { routeName: "Services", routePath: "/services" },
-    { routeName: "Blog", routePath: "/blog" },
-    { routeName: "Contact", routePath: "/contact" },
-    { routeName: "Login", routePath: "/login" },
-  ];
-  // const navLinks = (
-  //   <>
-  //     <RouteStyle routeName="Home" routePath="/" />
-  //     <RouteStyle routeName="About" routePath="/about" />
-  //     <RouteStyle routeName="Services" routePath="/Services" />
-  //     <RouteStyle routeName="Blog" routePath="/blog" />
-  //     <RouteStyle routeName="Contact" routePath="/contact" />
-  //   </>
-  // );
+  const { user, userLogOut } = useContext(AuthContext);
+  const handleLogout = () => {
+    swal({
+      title: "Are you sure?",
+      text: "You want to logout your account!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    }).then((willDelete) => {
+      if (willDelete) {
+        userLogOut()
+          .then((result) => {
+            swal("Good job!", "Logout Successful!", "success");
+          })
+          .catch((error) => {
+            swal(error.message);
+          });
+        // swal("Poof! Your imaginary file has been deleted!", {
+        //   icon: "success",
+        // });
+      } else {
+        swal("Logout has been Canceled!");
+      }
+    });
+
+    // userLogOut()
+    //   .then((result) => {
+    //     swal("Good job!", "Logout Successful!", "success");
+    //   })
+    //   .catch((error) => {
+    //     swal(error.message);
+    //   });
+  };
+  // const navLinks = [
+  //   { routeName: "Home", routePath: "/" },
+  //   { routeName: "About", routePath: "/about" },
+  //   { routeName: "Services", routePath: "/services" },
+  //   { routeName: "Blog", routePath: "/blog" },
+  //   { routeName: "Contact", routePath: "/contact" },
+  //   { routeName: "Login", routePath: "/login" },
+  // ];
+  const navLinks = (
+    <>
+      <li>
+        <RouteStyle routeName="Home" routePath="/" />
+      </li>
+      <li>
+        <RouteStyle routeName="About" routePath="/about" />
+      </li>
+      <li>
+        <RouteStyle routeName="Services" routePath="/Services" />
+      </li>
+      <li>
+        <RouteStyle routeName="Blog" routePath="/blog" />
+      </li>
+      <li>
+        <RouteStyle routeName="Contact" routePath="/contact" />
+      </li>
+      {/* {!user && (
+        <li>
+          <RouteStyle routeName="Login" routePath="/login" />
+        </li>
+      )} */}
+      {user ? (
+        <li>
+          <button onClick={handleLogout} className="font-semibold text-primary">
+            Logout
+          </button>
+        </li>
+      ) : (
+        <li>
+          <RouteStyle routeName="Login" routePath="/login" />
+        </li>
+      )}
+    </>
+  );
   return (
     <nav className="container navbar max-w-7xl">
       <div className="navbar-start">
@@ -41,27 +103,33 @@ const Navbar = () => {
             </svg>
           </div>
           <ul className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box font-medium w-52">
-            {navLinks.map((navLink) => (
+            {/* {navLinks?.map((navLink) => (
+            <li key={navLink.routeName}>
               <RouteStyle
-                key={navLink.routeName}
                 routeName={navLink.routeName}
                 routePath={navLink.routePath}
               />
-            ))}
+            </li>
+          ))} */}
+            {navLinks}
           </ul>
         </div>
         {/* <a className="text-xl btn btn-ghost">{logo}</a> */}
-        <img src={logo} alt="logo..." className="w-16 h-16 lg:w-24 lg:h-24" />
+        <a href="/">
+          <img src={logo} alt="logo..." className="w-16 h-16 lg:w-24 lg:h-24" />
+        </a>
       </div>
       <div className="hidden navbar-center lg:flex">
         <ul className="gap-5 px-1 text-lg font-medium menu-horizontal">
-          {navLinks.map((navLink) => (
-            <RouteStyle
-              key={navLink.routeName}
-              routeName={navLink.routeName}
-              routePath={navLink.routePath}
-            />
-          ))}
+          {/* {navLinks?.map((navLink) => (
+            <li key={navLink.routeName}>
+              <RouteStyle
+                routeName={navLink.routeName}
+                routePath={navLink.routePath}
+              />
+            </li>
+          ))} */}
+          {navLinks}
         </ul>
       </div>
       <div className="navbar-end">

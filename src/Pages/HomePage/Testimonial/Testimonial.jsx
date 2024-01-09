@@ -118,9 +118,10 @@ const Testimonial = () => {
       />
       <div className="mt-16 space-x-5">
         <Slider {...settings}>
-          {reviews.map((review) => (
-            <TestimonialItem key={review.id} review={review} />
-          ))}
+          {reviews &&
+            reviews?.map((review) => (
+              <TestimonialItem key={review.id} review={review} />
+            ))}
         </Slider>
       </div>
     </section>

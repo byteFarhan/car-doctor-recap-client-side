@@ -20,6 +20,7 @@ const Home = () => {
         <title>Home || Car Doctors</title>
       </Helmet>
       {/* slider or carousel section */}
+
       <Carousel />
       <About />
       <Services />

@@ -19,9 +19,10 @@ const Services = () => {
           sectionDescription="the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. "
         />
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
-            <ServicesCard key={service.service_id} service={service} />
-          ))}
+          {services &&
+            services?.map((service) => (
+              <ServicesCard key={service.service_id} service={service} />
+            ))}
         </div>
         <button className="block mx-auto my-10 btn-transparent btn-transparent-red">
           More Services

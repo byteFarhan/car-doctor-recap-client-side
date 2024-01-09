@@ -50,3 +50,9 @@
     @apply bg-transparent border-neutral;
   } */
 }
+
+::selection {
+  background: #ff3811;
+  color: white;
+  /* border-radius: 15px; */
+}
